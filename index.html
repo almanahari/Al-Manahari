@@ -1,78 +1,53 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar">
 <head>
-<meta charset="UTF-8">
-<title>المناهري</title>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>المناهري - دهانات وتشطيب</title>
 <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}body{ height:100vh; overflow:hidden; background:#000; }
 
-/* 🔥 خلفية متحركة */
-body {
-  margin: 0;
-  font-family: Arial;
-  text-align: center;
-  font-size: 22px;
+.hero{ height:100vh; width:100%; background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; display:flex; align-items:center; justify-content:center; text-align:center; transition: 1s ease-in-out; }
 
-  background: linear-gradient(-45deg, #111, #333, #555, #111);
-  background-size: 400% 400%;
-  animation: moveBG 10s ease infinite;
-  color: white;
-}
+.overlay{ position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); }
 
-/* حركة الخلفية */
-@keyframes moveBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
+.content{ position:relative; z-index:2; color:white; padding:20px; }
 
-/* صندوق الكلام */
-.box {
-  background: rgba(255,255,255,0.9);
-  color: black;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 12px;
-  font-size: 22px;
-}
+h1{ font-size:50px; margin-bottom:10px; }
 
-/* العنوان الكبير */
-h1 {
-  font-size: 42px;
-}
+h2{ font-size:26px; margin-bottom:20px; color:#f1f1f1; }
 
-/* أزرار */
-a {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 18px;
-  background: black;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 20px;
-}
+.btn{ padding:12px 25px; background:#ff9800; color:#fff; border:none; border-radius:8px; cursor:pointer; font-size:18px; }
 
-a:hover {
-  background: #25D366;
-}
+.btn:hover{ background:#e68900; }
 
-</style>
+.menu{ position:absolute; bottom:20px; left:50%; transform:translateX(-50%); display:flex; gap:15px; z-index:3; }
+
+.card{ padding:10px 15px; background:rgba(255,255,255,0.15); color:#fff; border-radius:10px; cursor:pointer; backdrop-filter: blur(10px); transition:0.3s; }
+
+.card:hover{ background:rgba(255,255,255,0.3); } </style>
+
 </head>
+<body><div class="hero" id="hero">
+  <div class="overlay"></div>  <div class="content">
+    <h1>المناهري</h1>
+    <h2>دهانات - بديل خشب - رخام - تشطيب حديث</h2>
+    <button class="btn">تواصل معنا</button>
+  </div>  <div class="menu">
+    <div class="card" onclick="setBg('https://media.giphy.com/media/wood-placeholder/giphy.gif')">بديل خشب</div>
+    <div class="card" onclick="setBg('https://media.giphy.com/media/marble-placeholder/giphy.gif')">رخام</div>
+    <div class="card" onclick="setBg('https://media.giphy.com/media/paint-placeholder/giphy.gif')">دهانات</div>
+  </div>
+</div><script>
+function setBg(img){
+  document.getElementById('hero').style.backgroundImage = 'url(' + img + ')';
+}
 
-<body>
-
-<h1>المناهري 🏗️</h1>
-<p>تشطيبات - بويا - بديل خشب - بديل رخام</p>
-
-<div class="box">
-  <h2>أهلاً بيك 👋</h2>
-  <p>أفضل خدمات التشطيب بأعلى جودة وسعر مناسب</p>
-</div>
-
-<a href="paint.html">بويا 🎨</a>
-<a href="wood.html">بديل خشب 🪵</a>
-<a href="marble.html">بديل رخام 🪨</a>
-
-</body>
+// default background
+document.getElementById('hero').style.backgroundImage = "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952')";
+</script></body>
 </html>
