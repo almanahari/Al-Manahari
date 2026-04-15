@@ -62,3 +62,125 @@ a{
 
 </body>
 </html>
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GLC دهانات وديكور</title>
+  <style>
+    body{
+      margin:0;
+      font-family:Arial;
+      background:#111;
+      color:#fff;
+    }header{
+  text-align:center;
+  padding:20px;
+  background:#000;
+}
+
+h1{margin:0}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.card{
+  background:#1c1c1c;
+  border-radius:15px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.card:hover{transform:scale(1.03)}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card h2{
+  margin:10px;
+}
+
+.card p{
+  margin:10px;
+  color:#bbb;
+  font-size:14px;
+}
+
+.hidden{display:none;}
+
+.back{
+  margin:15px;
+  padding:10px 15px;
+  background:#333;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  border-radius:8px;
+}
+
+.title{
+  text-align:center;
+  padding:10px;
+}
+
+  </style>
+</head><body><header>
+  <h1>GLC دهانات و ديكور</h1>
+</header><!-- الصفحة الرئيسية --><div id="home">  <div class="grid"><div class="card">
+  <img src="https://via.placeholder.com/400x300?text=Wood" />
+  <h2>بديل خشب</h2>
+  <p>أحدث تصميمات بديل الخشب</p>
+</div>
+
+<div class="card">
+  <img src="https://via.placeholder.com/400x300?text=Marble" />
+  <h2>بديل رخام</h2>
+  <p>ديكورات بديل الرخام الحديثة</p>
+</div>
+
+<div class="card" onclick="openPaints()">
+  <img src="https://via.placeholder.com/400x300?text=Paints" />
+  <h2>الدهانات</h2>
+  <p>كل أنواع الدهانات والمواد</p>
+</div>
+
+  </div></div><!-- صفحة الدهانات --><div id="paints" class="hidden"><button class="back" onclick="backHome()">⬅ رجوع</button>
+
+  <h2 class="title">اختيارات الدهانات</h2>  <div class="grid"><div class="card">
+  <img src="https://via.placeholder.com/400x300?text=Wood+Paint" />
+  <h2>دهان أخشاب</h2>
+  <p>دهانات مخصصة للخشب وبديل الخشب</p>
+</div>
+
+<div class="card">
+  <img src="https://via.placeholder.com/400x300?text=Sealer+Wood" />
+  <h2>سيلر أخشاب</h2>
+  <p>طبقة أساسية لتجهيز الخشب قبل الدهان</p>
+</div>
+
+<div class="card">
+  <img src="https://via.placeholder.com/400x300?text=Primer" />
+  <h2>برايمر</h2>
+  <p>تحضير الأسطح قبل التشطيب النهائي</p>
+</div>
+
+  </div></div><script>
+function openPaints(){
+  document.getElementById('home').classList.add('hidden');
+  document.getElementById('paints').classList.remove('hidden');
+}
+
+function backHome(){
+  document.getElementById('home').classList.remove('hidden');
+  document.getElementById('paints').classList.add('hidden');
+}
+</script></body>
+</html>
