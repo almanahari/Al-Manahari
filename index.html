@@ -4,45 +4,54 @@
   <meta charset="UTF-8">
   <title>المناهري للتشطيبات</title>
   <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f5f5f5;
-      text-align: center;
-    }
+    body { font-family: Arial; margin:0; background:#f5f5f5; }
 
     header {
-      background: #2c3e50;
-      color: white;
-      padding: 20px;
+      background:#111;
+      color:white;
+      padding:20px;
+      text-align:center;
     }
 
-    .box {
-      background: white;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 10px;
+    nav {
+      background:#333;
+      padding:10px;
+      text-align:center;
     }
 
-    .products img {
-      width: 180px;
-      height: 120px;
-      object-fit: cover;
-      margin: 10px;
-      border-radius: 10px;
+    nav a {
+      color:white;
+      text-decoration:none;
+      margin:10px;
+      font-size:18px;
+    }
+
+    .hero {
+      padding:40px;
+      text-align:center;
+      background:white;
     }
 
     .btn {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 10px;
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 15px;
+      background:black;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+    }
+
+    footer {
+      text-align:center;
+      padding:15px;
+      margin-top:20px;
+      background:#111;
+      color:white;
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -50,33 +59,23 @@
   <p>تشطيبات - بويا - بديل خشب - بديل رخام</p>
 </header>
 
-<div class="box">
-  <h2>خدماتنا</h2>
-  <p>نقدّم جميع أعمال التشطيب بأعلى جودة وأسعار مناسبة</p>
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="paint.html">بويا</a>
+  <a href="wood.html">بديل خشب</a>
+  <a href="marble.html">بديل رخام</a>
+</nav>
+
+<div class="hero">
+  <h2>أهلاً بيك في المناهري 👋</h2>
+  <p>أفضل خدمات التشطيب بأعلى جودة وسعر مناسب</p>
+
+  <a class="btn" href="paint.html">شوف خدماتنا</a>
 </div>
 
-<div class="box products">
-  <h2>أعمالنا</h2>
-
-  <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="دهان">
-  <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="تشطيب">
-  <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6" alt="رخام">
-  <img src="https://images.unsplash.com/photo-1615873968403-89e068629265" alt="خشب">
-
-</div>
-
-<div class="box">
-  <h2>تواصل معنا</h2>
-
-  <p>📞 01228835995</p>
-
-  <a class="btn"
-     href="https://wa.me/201228835995"
-     target="_blank">
-     راسلنا واتساب
-  </a>
-</div>
+<footer>
+  📞 01228835995
+</footer>
 
 </body>
 </html>
-<a href="wood.html">بديل خشب</a>
